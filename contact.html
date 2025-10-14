@@ -13,6 +13,38 @@
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Center everything in contact section */
+    #contact .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 80vh;
+      flex-direction: column;
+    }
+
+    #contact .contact-info p {
+      margin: 10px 0;
+    }
+
+    #contact .social-links {
+      margin-top: 20px;
+    }
+
+    #contact .social-links a {
+      margin: 0 10px;
+      font-size: 1.8rem;
+      color: rgb(109,67,0);
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    #contact .social-links a:hover {
+      transform: scale(1.1);
+      color: #1A4D2E; /* green hover color */
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -32,28 +64,25 @@
 
   <section id="contact">
     <div class="main-container">
-      <div class="content" data-aos="fade-right" data-aos-duration="1000">
+      <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <h1>Get In <span>Touch</span></h1>
         <p data-aos="fade-up" data-aos-delay="200">
-          Feel free to reach out — I’d love to connect or collaborate. You can contact me using the information below.
+          Feel free to reach out — I’d love to connect or collaborate.<br>
+          You can contact me using the information below.
         </p>
 
         <div class="contact-info" style="margin-top: 30px; line-height: 2;">
-          <p data-aos="fade-left" data-aos-delay="300"><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:lorencejoshuaaguilar1@gmail.com" style="color: rgb(109,67,0); text-decoration: none;">lorencejoshuaaguilar1@gmail.com</a></p>
-          <p data-aos="fade-left" data-aos-delay="300"><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:l.aguilar75@yahoo.com" style="color: rgb(109,67,0); text-decoration: none;">l.aguilar75@yahoo.com</a></p>
-          <p data-aos="fade-left" data-aos-delay="400"><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> <a href="tel:+639627508657" style="color: rgb(109,67,0); text-decoration: none;">+63 962 750 8657</a></p>
-          <p data-aos="fade-left" data-aos-delay="500"><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Candaba, Pampanga, Philippines</p>
+          <p data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:lorencejoshuaaguilar1@gmail.com" style="color: rgb(109,67,0); text-decoration: none;">lorencejoshuaaguilar1@gmail.com</a></p>
+          <p data-aos="fade-up" data-aos-delay="350"><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:l.aguilar75@yahoo.com" style="color: rgb(109,67,0); text-decoration: none;">l.aguilar75@yahoo.com</a></p>
+          <p data-aos="fade-up" data-aos-delay="400"><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> <a href="tel:+639627508657" style="color: rgb(109,67,0); text-decoration: none;">+63 962 750 8657</a></p>
+          <p data-aos="fade-up" data-aos-delay="450"><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Candaba, Pampanga, Philippines</p>
         </div>
 
-        <div class="social-links" data-aos="flip-up" data-aos-delay="600">
+        <div class="social-links" data-aos="fade-up" data-aos-delay="600">
           <a href="https://github.com/Trixster25" target="_blank"><i class="fa-brands fa-github"></i></a>
           <a href="https://facebook.com/lorencejoshua.aguilar.31" target="_blank"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://linkedin.com/in/lorence-joshua-aguilar-460422358" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-      </div>
-
-      <div class="image" data-aos="zoom-in-left" data-aos-duration="2000">
-        <img src="contact.png" alt="Contact illustration">
       </div>
     </div>
   </section>
