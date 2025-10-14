@@ -15,7 +15,8 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+    /* Reversed gradient with a deeper brown tone for a smoother transition */
+    background: linear-gradient(to right, rgb(200,150,90), rgb(254,215,173), rgb(255,255,255));
 }
 
 /* ---------------- NAVIGATION ---------------- */
@@ -41,8 +42,7 @@ nav {
 }
 
 .logo span {
-    color: rgb(109,67, 0);
-    text-shadow: 0 0 10px rgb(109,67, 0);
+    color: rgb(109,67,0);
 }
 
 .hamburg, .cancel {
@@ -67,7 +67,7 @@ nav {
     color: black;
     text-decoration: none;
     font-weight: 500;
-    transform: 0.3s linear;
+    transition: 0.3s linear;
 }
 
 .nav-container .links a::before {
@@ -77,7 +77,7 @@ nav {
     left: 0;
     width: 0%;
     height: 3px;
-    background-color: rgb(109,67, 0);
+    background-color: rgb(109,67,0);
     transition: 0.2s linear;
 }
 
@@ -86,13 +86,13 @@ nav {
 }
 
 .nav-container .links a:hover {
-    color: rgb(109,67, 0);
+    color: rgb(109,67,0);
 }
 
-/* ---------- CONTACT BUTTON FIXED VERSION ---------- */
+/* ---------- CONTACT BUTTON ---------- */
 
 .nav-container .contact-btn {
-    background-color: #000; /* Default black */
+    background-color: #000;
     padding: 5px 20px;
     border-radius: 20px;
     border: 2px solid #000;
@@ -107,7 +107,7 @@ nav {
 }
 
 .nav-container .contact-btn:hover {
-    background-color: #1A4D2E; /* Green hover */
+    background-color: #1A4D2E;
     border-color: #1A4D2E;
     transform: scale(1.05);
 }
@@ -141,7 +141,7 @@ nav {
 }
 
 .dropdown .links a:hover {
-    background-color: rgb(109,67, 0);
+    background-color: rgb(109,67,0);
 }
 
 /* ---------------- HERO SECTION ---------------- */
@@ -165,7 +165,7 @@ section {
 }
 
 .main-container .image img {
-    width: 100%;
+    width: 75%;
 }
 
 .main-container .content {
@@ -179,13 +179,11 @@ section {
 }
 
 .content h1 span {
-    color: rgb(109,67, 0);
-    text-shadow: 0 0 10px rgb(109,67, 0);
+    color: rgb(109,67,0);
 }
 
 .content h2 span {
-    color: rgb(109,67, 0);
-    text-shadow: 0 0 10px rgb(109,67, 0);
+    color: rgb(109,67,0);
 }
 
 .content .typewriter {
@@ -194,9 +192,8 @@ section {
 }
 
 .content .typewriter span {
-    color: rgb(109,67, 0);
+    color: rgb(109,67,0);
     font-size: 2.5rem;
-    text-shadow: 0 0 5px rgb(109,67, 0);
     position: relative;
     transition: 0.3s linear;
 }
@@ -247,9 +244,9 @@ section {
     width: 3rem;
     height: 3rem;
     background-color: transparent;
-    border: 0.2rem solid rgb(109,67, 0);
+    border: 0.2rem solid rgb(109,67,0);
     border-radius: 50%;
-    color: rgb(109,67, 0);
+    color: rgb(109,67,0);
     margin: 5px 10px;
     font-size: 1.5rem;
     transition: 0.2s linear;
@@ -258,7 +255,7 @@ section {
 .social-links i:hover {
     scale: 1.3;
     color: white;
-    background-color: rgb(109,67, 0);
+    background-color: rgb(109,67,0);
     filter: drop-shadow(0 0 10px rgb(109,67,0));
 }
 
@@ -268,7 +265,7 @@ section {
     width: 40%;
     height: 6vh;
     margin: 30px;
-    background-color: rgb(109,67, 0);
+    background-color: rgb(109,67,0);
     color: white;
     border: none;
     outline: none;
@@ -276,15 +273,33 @@ section {
     font-weight: 700;
     border-radius: 5px;
     transition: 0.2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content button a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content button:hover {
     scale: 1.1;
-    color: rgb(109,67, 0);
-    border: 2px solid rgb(109,67, 0);
+    color: rgb(109,67,0);
+    border: 2px solid rgb(109,67,0);
     background-color: transparent;
     font-weight: 700;
-    box-shadow: 0 0 40px rgb(109,67, 0);
+    box-shadow: 0 0 40px rgb(109,67,0);
+}
+
+.content button:hover a {
+    color: rgb(109,67,0);
 }
 
 /* ---------------- RESPONSIVE ---------------- */

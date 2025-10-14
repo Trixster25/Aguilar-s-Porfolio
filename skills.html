@@ -21,37 +21,95 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Smooth fade transition for the certification images */
-    #certImage {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Fix page height and scrolling */
+    body {
+      height: auto;
+      overflow-y: auto;
+      background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+    }
+
+    /* Layout styling */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 80px 40px;
+      gap: 50px;
+      background-color: #f9f9f9;
+    }
+
+    .skills-left, .skills-right {
+      flex: 1 1 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .skills-left img {
       transition: opacity 0.8s ease-in-out;
       width: 100%;
-      max-width: 600px;
+      max-width: 450px;
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       margin-top: 20px;
     }
 
-    .skills-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .skills-container h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    .skills-right h1 {
       color: #1a4d2e;
+      font-size: 2rem;
+      margin-bottom: 25px;
     }
 
-    .skills-container p {
-      max-width: 600px;
+    /* Skills list */
+    .skill {
+      width: 100%;
+      max-width: 450px;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    .skill-name {
+      font-weight: 600;
       color: #333;
-      margin-bottom: 30px;
-      line-height: 1.6;
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background: #ddd;
+      border-radius: 30px;
+      overflow: hidden;
+      height: 14px;
+    }
+
+    .progress {
+      height: 100%;
+      background: #1a4d2e;
+      width: 0;
+      border-radius: 30px;
+      transition: width 1.2s ease-in-out;
+    }
+
+    @media (max-width: 900px) {
+      .skills-container {
+        flex-direction: column;
+        padding: 60px 20px;
+      }
+
+      .skills-right {
+        text-align: center;
+      }
+
+      .skill {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -61,7 +119,7 @@
   <nav>
     <div class="nav-container">
       <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-      LJ <span>Aguilar</span>
+        LJ <span>Aguilar</span>
       </div>
 
       <div class="links">
@@ -88,19 +146,70 @@
   <!-- Skills Section -->
   <section id="skills">
     <div class="skills-container">
-      <h1 data-aos="fade-right" data-aos-duration="1000">My Skills & Certifications</h1>
-      <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-        Here are some of my key technical skills and certifications that highlight my continuous growth in the field of technology.
-      </p>
+      
+      <!-- Left side: Certifications slideshow -->
+      <div class="skills-left" data-aos="fade-right" data-aos-duration="1000">
+        <img 
+          id="certImage" 
+          src="https://i.imgur.com/tqUOmuM.jpeg" 
+          alt="Certifications"
+        >
+      </div>
 
-      <!-- Animated Image Switch -->
-      <img 
-        id="certImage" 
-        src="https://i.imgur.com/tqUOmuM.jpeg" 
-        alt="Skills and Certifications" 
-        data-aos="zoom-in" 
-        data-aos-duration="2000"
-      >
+      <!-- Right side: Technical skills with progress bars -->
+      <div class="skills-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+        <h1>Technical Skills</h1>
+
+        <div class="skill">
+          <div class="skill-name">Hardware & Software Troubleshooting</div>
+          <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Operating System Installation (Windows/Linux)</div>
+          <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Networking (LAN/WAN, IP Configuration)</div>
+          <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Technical Support & IT Helpdesk</div>
+          <div class="progress-bar"><div class="progress" data-width="88%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Device Configuration & Management</div>
+          <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Programming (Java, Python, HTML, CSS)</div>
+          <div class="progress-bar"><div class="progress" data-width="55%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Database Management (MySQL, SQLite)</div>
+          <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">System Deployment & Maintenance</div>
+          <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Documentation & Inventory Management</div>
+          <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Microsoft 365 & Google Workspace</div>
+          <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -117,6 +226,7 @@
       document.querySelector(".dropdown").style.transform = "translateY(-500px)";
     }
 
+    // Certification slideshow
     const certImages = [
       "https://i.imgur.com/tqUOmuM.jpeg",
       "https://i.imgur.com/yWY7wys.jpeg",
@@ -133,7 +243,15 @@
         certImageElement.src = certImages[index];
         certImageElement.style.opacity = 1;
       }, 500);
-    }, 3000); // Switch every 3 seconds
+    }, 3000);
+
+    // Animate progress bars on load
+    window.addEventListener('load', () => {
+      const progressBars = document.querySelectorAll('.progress');
+      progressBars.forEach(bar => {
+        bar.style.width = bar.getAttribute('data-width');
+      });
+    });
   </script>
 </body>
 </html>
