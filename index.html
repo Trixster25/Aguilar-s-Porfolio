@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aguilar's Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+  />
+
+  <!-- AOS Animation -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@next/dist/aos.css"
+  />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>Aguilar</span>
+      </div>
+
+      <div class="links">
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+        <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contacts.html">Contact</a></div>
+      </div>
+
+      <i class="fa-solid fa-bars hamburg" onclick="openMenu()"></i>
+    </div>
+
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contacts.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="closeMenu()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <div class="main-container">
+      <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+        <img src="main.png" alt="Portrait of Lorence Joshua Aguilar" />
+      </div>
+
+      <div class="content">
+        <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
+          Hey, I'm <span>Lorence Joshua Aguilar</span>
+        </h1>
+        <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+          I'm a <span>Computer Science Graduate</span>
+        </h2>
+        <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+          I’m Lorence Joshua Aguilar, an aspiring IT professional passionate about technology, problem-solving, and continuous learning. I build efficient and user-friendly solutions through curiosity and dedication.
+        </p>
+
+        <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+          <a href="https://github.com/Trixster25" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.facebook.com/lorencejoshua.aguilar.31/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/lorence-joshua-aguilar-460422358/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+        <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+          <button>
+            <a href="https://drive.google.com/file/d/1zWZW--1UllFtEj2zvXTNo4_zBCW_FJKJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              Download CV
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+
+    function openMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(0)";
+    }
+
+    function closeMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>

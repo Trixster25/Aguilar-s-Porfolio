@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Aguilar's Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+  />
+
+  <!-- AOS Animation -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@next/dist/aos.css"
+  />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Smooth fade transition for the certification images */
+    #certImage {
+      transition: opacity 0.5s ease-in-out;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .skills-container h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #1a4d2e;
+    }
+
+    .skills-container p {
+      max-width: 600px;
+      color: #333;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>Aguilar</span>
+      </div>
+
+      <div class="links">
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+        <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contacts.html">Contact</a></div>
+      </div>
+
+      <i class="fa-solid fa-bars hamburg" onclick="openMenu()"></i>
+    </div>
+
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contacts.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="closeMenu()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="skills-container">
+      <h1 data-aos="fade-right" data-aos-duration="1000">My Skills & Certifications</h1>
+      <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+        Here are some of my key technical skills and certifications that highlight my continuous growth in the field of technology.
+      </p>
+
+      <!-- Certification Image Slideshow -->
+      <img 
+        id="certImage" 
+        src="https://i.imgur.com/yourSkillImage.png" 
+        alt="Skills illustration" 
+        data-aos="zoom-in" 
+        data-aos-duration="2000"
+      >
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+
+    function openMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(0)";
+    }
+
+    function closeMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+
+    // Certification Image Switcher
+    const certImages = [
+      "https://drive.google.com/file/d/1_9Ypv4A_WCAYW2zVeEHQsRfiDgB-0Ycg/view?usp=sharing",  // Example main skill image
+      "https://drive.google.com/file/d/1fLNZpCpUDuiVbz_h1BcsER3FKS5MZS87/view?usp=sharing",       // Certification 1
+      "https://drive.google.com/file/d/1CzmyVF_vJTyDnxQ4OcE_dhpyuAWmmail/view?usp=drive_link",       // Certification 2
+    ];
+
+    let index = 0;
+    const certImageElement = document.getElementById("certImage");
+
+    setInterval(() => {
+      index = (index + 1) % certImages.length;
+      certImageElement.style.opacity = 0;
+      setTimeout(() => {
+        certImageElement.src = certImages[index];
+        certImageElement.style.opacity = 1;
+      }, 500);
+    }, 3000); // Switch every 3 seconds
+  </script>
+</body>
+</html>
