@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates | Aguilar's Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+  />
+
+  <!-- AOS Animation -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@next/dist/aos.css"
+  />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    /* Navigation */
+    nav {
+      width: 100%;
+      padding: 20px 0;
+      background: transparent;  /* no solid background */
+      color: #1a4d2e;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .links a:hover {
+      color: rgb(109, 67, 0);
+    }
+
+    /* Certificates section */
+    #certificates {
+      padding: 100px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .certificates-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .certificate {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 25px 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .certificate:hover {
+      transform: translateY(-5px);
+    }
+
+    .certificate img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .certificate-details {
+      text-align: left;
+    }
+
+    .certificate-details h3 {
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .certificate-details p {
+      color: #666;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .certificate {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .certificate img {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        LJ <span>Aguilar</span>
+      </div>
+
+      <div class="links">
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="certificates.html">Certificates</a></div>
+        <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contact.html">Contact</a></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <h1 data-aos="fade-up" data-aos-duration="1000">My Certificates</h1>
+
+    <div class="certificates-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+      
+      <div class="certificate">
+        <img src="https://i.imgur.com/q7lPUoN.jpeg" alt="Device Configuration Certificate">
+        <div class="certificate-details">
+          <h3>Device Configuration & Management</h3>
+          <p>Certified by CertNexus</p>
+        </div>
+      </div>
+
+      <div class="certificate">
+        <img src="https://i.imgur.com/tqUOmuM.jpeg" alt="Excel Association Certificate">
+        <div class="certificate-details">
+          <h3>Excel Association Certificate</h3>
+          <p>Issued by Excel Association</p>
+        </div>
+      </div>
+
+      <div class="certificate">
+        <img src="https://i.imgur.com/yWY7wys.jpeg" alt="Introduction to Cyber Certificate">
+        <div class="certificate-details">
+          <h3>Introduction to Cybersecurity</h3>
+          <p>Completed Introduction to Cyber course</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+</body>
+</html>
