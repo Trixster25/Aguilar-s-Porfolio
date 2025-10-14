@@ -23,9 +23,9 @@
   <style>
     /* Smooth fade transition for the certification images */
     #certImage {
-      transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.8s ease-in-out;
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       margin-top: 20px;
@@ -61,7 +61,7 @@
   <nav>
     <div class="nav-container">
       <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-        LJ <span>Aguilar</span>
+        <span>Aguilar</span>
       </div>
 
       <div class="links">
@@ -93,16 +93,18 @@
         Here are some of my key technical skills and certifications that highlight my continuous growth in the field of technology.
       </p>
 
+      <!-- Animated Image Switch -->
       <img 
         id="certImage" 
-        src="https://drive.google.com/uc?export=view&id=1_9Ypv4A_WCAYW2zVeEHQsRfiDgB-0Ycg" 
-        alt="Skills illustration" 
+        src="https://i.imgur.com/tqUOmuM.jpeg" 
+        alt="Skills and Certifications" 
         data-aos="zoom-in" 
         data-aos-duration="2000"
       >
     </div>
   </section>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ offset: 0 });
@@ -115,11 +117,10 @@
       document.querySelector(".dropdown").style.transform = "translateY(-500px)";
     }
 
-    // Corrected direct Drive links
     const certImages = [
-      "https://drive.google.com/uc?export=view&id=1_9Ypv4A_WCAYW2zVeEHQsRfiDgB-0Ycg",
-      "https://drive.google.com/uc?export=view&id=1fLNZpCpUDuiVbz_h1BcsER3FKS5MZS87",
-      "https://drive.google.com/uc?export=view&id=1CzmyVF_vJTyDnxQ4OcE_dhpyuAWmmail"
+      "https://i.imgur.com/tqUOmuM.jpeg",
+      "https://i.imgur.com/yWY7wys.jpeg",
+      "https://i.imgur.com/q7lPUoN.jpeg"
     ];
 
     let index = 0;
