@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
   <nav>
     <div class="nav-container">
       <div class="links">
@@ -27,6 +28,7 @@
     </div>
   </nav>
 
+  <!-- About Section -->
   <section id="about">
     <div class="main-container">
       <div class="image" data-aos="zoom-in-right" data-aos-duration="2000">
@@ -35,35 +37,39 @@
 
       <div class="content">
         <h1 data-aos="fade-left" data-aos-duration="1000">About <span>Me</span></h1>
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-  <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
-          Educational <span>Background</span>
-        </h2>
-  • <strong>St. Patrick School</strong> — Elementary to Senior High School (2009 – 2021)<br>
-  • <strong>FEU – Institute of Technology</strong> — Bachelor of Science in Computer Science, Major in Software Development (Aug 2021 – July 2022)<br>
-  • <strong>Baliuag University</strong> — Bachelor of Science in Computer Science, Major in Software Development (Aug 2022 – July 2025)<br>
-  • CITE Alumni Vice-President  |  SSITE Vice-President of External Affairs  |  SSITE 3rd Year Representative<br>
-  • Thesis — “Empowering Campus Connectivity: Alice Voice Assistant”
-</p>
 
-<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-  <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
-          Work <span>Experience</span>
-        </h2>
-  • <strong>IT On-the-Job Training (OJT)</strong> — City Government of Baliwag (April 2025 – June 2025)<br>
-  Assisted in IT support and help desk operations by troubleshooting hardware, software, and network issues, managing tickets, and providing remote and onsite support.  
-  Handled software installation, system monitoring, and user account setup while ensuring clear communication and quality customer service.  
-  Gained hands-on experience in documentation, log management, and coordinating with internal teams to resolve technical problems efficiently.
-</p>
+        <!-- Educational Background -->
+        <div class="education-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">Educational <span>Background</span></h2>
+          <ul>
+            <li><strong>St. Patrick School</strong> — Elementary to Senior High School (2009 – 2021)</li>
+            <li><strong>FEU – Institute of Technology</strong> — Bachelor of Science in Computer Science, Major in Software Development (Aug 2021 – July 2022)</li>
+            <li><strong>Baliuag University</strong> — Bachelor of Science in Computer Science, Major in Software Development (Aug 2022 – July 2025)</li>
+            <li>CITE Alumni Vice-President | SSITE Vice-President of External Affairs | SSITE 3rd Year Representative</li>
+            <li>Thesis — “Empowering Campus Connectivity: Alice Voice Assistant”</li>
+          </ul>
+        </div>
 
+        <!-- Work Experience -->
+        <div class="work-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+          <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Work <span>Experience</span></h2>
+          <ul>
+            <li><strong>IT On-the-Job Training (OJT)</strong> — City Government of Baliwag (April 2025 – June 2025)</li>
+          </ul>
+          <p>
+            Assisted in IT support and help desk operations by troubleshooting hardware, software, and network issues, managing tickets, and providing remote and onsite support.
+            Handled software installation, system monitoring, and user account setup while ensuring clear communication and quality customer service.
+            Gained hands-on experience in documentation, log management, and coordinating with internal teams to resolve technical problems efficiently.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Scripts -->
+  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ offset: 0 });
+    AOS.init({ offset: 50, duration: 1000, once: true });
   </script>
 </body>
 </html>
