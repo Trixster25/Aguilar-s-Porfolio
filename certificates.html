@@ -24,18 +24,6 @@
     html {
       scroll-behavior: smooth;
     }
- 
-
-    /* Navigation */
-
-    .links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .links a:hover {
-      color: rgb(109, 67, 0);
-    }
 
     /* Certificates section */
     #certificates {
@@ -47,10 +35,8 @@
     }
 
     #certificates h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 50px;
-      color: #000;
+      align-items: center;
+      text-align: center;
     }
 
     .certificates-container {
@@ -144,10 +130,12 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="certificates">
-    <h1 data-aos="fade-up" data-aos-duration="1000">My Certificates</h1>
+  <section id="contact">
+    <div class="main-container">
+      <div class="content" data-aos="fade-up" data-aos-duration="1000">
+        <h1> My <span>Certificates</span></h1>
 
-    <div class="certificates-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div class="certificates-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
       
       <div class="certificate">
         <img src="https://i.imgur.com/q7lPUoN.jpeg" alt="Device Configuration Certificate">
@@ -165,14 +153,14 @@
         </div>
       </div>
 
-      <div class="certificate">
-        <img src="https://i.imgur.com/yWY7wys.jpeg" alt="Introduction to Cyber Certificate">
-        <div class="certificate-details">
-          <h3>Introduction to Cybersecurity</h3>
-          <p>Completed Introduction to Cyber course</p>
+        <div class="certificate">
+          <img src="https://i.imgur.com/yWY7wys.jpeg" alt="Introduction to Cyber Certificate">
+          <div class="certificate-details">
+            <h3>Introduction to Cybersecurity</h3>
+            <p>Completed Introduction to Cyber course</p>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
