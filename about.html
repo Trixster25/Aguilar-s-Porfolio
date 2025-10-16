@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Lorence Aguilar</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Aguilar's Portfolio</title>
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+  />
 
   <!-- AOS Animation -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@next/dist/aos.css"
+  />
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Navigation -->
@@ -25,10 +31,23 @@
         <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="certificates.html">Certificates</a></div>
         <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contact.html">Contact</a></div>
       </div>
+
+      <i class="fa-solid fa-bars hamburg" onclick="openMenu()"></i>
+    </div>
+
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="closeMenu()"></i>
+      </div>
     </div>
   </nav>
 
-  <!-- About Section -->
+  <!-- Hero Section -->
   <section id="about">
     <div class="main-container">
       <div class="image" data-aos="zoom-in-right" data-aos-duration="2000">
@@ -66,10 +85,18 @@
     </div>
   </section>
 
-  <!-- AOS Script -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ offset: 50, duration: 1000, once: true });
+    AOS.init({ offset: 0 });
+
+    function openMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(0)";
+    }
+
+    function closeMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
   </script>
 </body>
 </html>

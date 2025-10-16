@@ -96,7 +96,6 @@
     }
   </style>
 </head>
-
 <body>
   <!-- Navigation -->
   <nav>
@@ -108,12 +107,25 @@
         <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="certificates.html">Certificates</a></div>
         <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contact.html">Contact</a></div>
       </div>
+
+      <i class="fa-solid fa-bars hamburg" onclick="openMenu()"></i>
+    </div>
+
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="closeMenu()"></i>
+      </div>
     </div>
   </nav>
 
-  <!-- Skills Section -->
+  <!-- Hero Section -->
   <section id="skills">
-    <h1 data-aos="fade-up" data-aos-duration="1000">Technical Skills</h1>
+    <h1 data-aos="fade-up" data-aos-duration="1000">Technical <span>Skills</span></h1>
 
     <div class="skills-grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
       <div class="skill">
@@ -172,14 +184,23 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ offset: 0 });
-
-    // Animate progress bars on load
+// Animate progress bars on load
     window.addEventListener('load', () => {
       const progressBars = document.querySelectorAll('.progress');
       progressBars.forEach(bar => {
         bar.style.width = bar.getAttribute('data-width');
       });
     });
+
+    function openMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(0)";
+    }
+
+    function closeMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+
+    
   </script>
 </body>
 </html>

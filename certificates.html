@@ -116,7 +116,6 @@
     }
   </style>
 </head>
-
 <body>
   <!-- Navigation -->
   <nav>
@@ -128,10 +127,23 @@
         <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="certificates.html">Certificates</a></div>
         <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contact.html">Contact</a></div>
       </div>
+
+      <i class="fa-solid fa-bars hamburg" onclick="openMenu()"></i>
+    </div>
+
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="closeMenu()"></i>
+      </div>
     </div>
   </nav>
 
-  <!-- Certificates Section -->
+  <!-- Hero Section -->
   <section id="certificates">
     <h1 data-aos="fade-up" data-aos-duration="1000">My Certificates</h1>
 
@@ -164,9 +176,18 @@
     </div>
   </section>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ offset: 0 });
+
+    function openMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(0)";
+    }
+
+    function closeMenu() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
   </script>
 </body>
 </html>
